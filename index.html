@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my web site</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolleyZone | Voleybol olami</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111a30;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #38e8a5;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #38e8a5;
+        }
+
+        .hero {
+            min-height: 440px;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            background:
+                radial-gradient(circle at 80% 30%, #1b695c, transparent 35%),
+                linear-gradient(135deg, #101a31, #0b1020);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 60px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38e8a5;
+        }
+
+        .hero p {
+            color: #c5cee0;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .hero-ball {
+            font-size: clamp(100px, 18vw, 190px);
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-18px) rotate(12deg); }
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38e8a5;
+            color: #07150f;
+            padding: 13px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #20c98a;
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: #b7c2d7;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: #151f36;
+            border: 1px solid #263650;
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #38e8a5;
+        }
+
+        .card .emoji {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #38e8a5;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #c5cee0;
+        }
+
+        .training {
+            background: #111a30;
+        }
+
+        .training-box {
+            max-width: 700px;
+            margin: auto;
+            background: #151f36;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .training-box li {
+            margin: 12px 0 12px 22px;
+            color: #e0e7f3;
+        }
+
+        #tip {
+            color: #38e8a5;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .quote {
+            text-align: center;
+            font-size: 23px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .quote span {
+            color: #38e8a5;
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #070b16;
+            color: #9ba9c0;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .hero {
+                text-align: center;
+                justify-content: center;
+                padding: 55px 6%;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🏐 VolleyZone</div>
+
+        <nav>
+            <a href="#bosh">Bosh sahifa</a>
+            <a href="#haqida">Voleybol</a>
+            <a href="#qoidalar">Qoidalar</a>
+            <a href="#mashgulot">Mashg‘ulot</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="bosh">
+            <div class="hero-text">
+                <h1>Voleybol — bu <span>bizning ishtiyoqimiz!</span></h1>
+
+                <p>
+                    Sakra, zarba ber, jamoang bilan g‘alaba qozon!
+                    Voleybol olamiga xush kelibsan.
+                </p>
+
+                <a href="#haqida" class="btn">
+                    Boshlash →
+                </a>
+            </div>
+
+            <div class="hero-ball">🏐</div>
+        </section>
+
+        <section id="haqida">
+            <h2 class="section-title">Voleybol olami</h2>
+
+            <p class="section-desc">
+                Kuch, tezlik, aniqlik va jamoaviy ruh!
+            </p>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="emoji">🏐</div>
+                    <h3>Voleybol nima?</h3>
+                    <p>
+                        Voleybol — to‘pni to‘r ustidan raqib maydoniga
+                        tushirishga asoslangan jamoaviy sport turi.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="emoji">🤝</div>
+                    <h3>Jamoaviy o‘yin</h3>
+                    <p>
+                        O‘yinchilar bir-birini qo‘llab-quvvatlaydi,
+                        to‘pni uzatadi va birgalikda ochko oladi.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="emoji">💪</div>
+                    <h3>Foydalari</h3>
+                    <p>
+                        Voleybol chaqqonlik, muvozanat, sakrash
+                        qobiliyati va jamoada ishlashni rivojlantiradi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="qoidalar">
+            <h2 class="section-title">Asosiy qoidalar</h2>
+
+            <p class="section-desc">
+                Voleybolni yaxshi o‘ynash uchun qoidalarni bil!
+            </p>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="emoji">👥</div>
+                    <h3>6 nafar o‘yinchi</h3>
+                    <p>
+                        Standart zal voleybolida har bir jamoa
+                        maydonda 6 nafar o‘yinchi bilan qatnashadi.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="emoji">3️⃣</div>
+                    <h3>Uchta tegish</h3>
+                    <p>
+                        Jamoa to‘pni raqib maydoniga qaytarishdan
+                        oldin, blokdan tashqari, ko‘pi bilan
+                        3 marta tegishi mumkin.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="emoji">🏆</div>
+                    <h3>25 ochko</h3>
+                    <p>
+                        Odatdagi set 25 ochkogacha davom etadi.
+                        G‘alaba uchun kamida 2 ochko farq kerak.
+                        Hal qiluvchi set odatda 15 ochkogacha.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="training" id="mashgulot">
+            <h2 class="section-title">Mashg‘ulotlar rejasi</h2>
+
+            <p class="section-desc">
+                Har kuni oz-ozdan mashq qil va mahoratingni oshir!
+            </p>
+
+            <div class="training-box">
+                <ul>
+                    <li>5–10 daqiqa — yengil qizish va badan tarbiya.</li>
+                    <li>10 daqiqa — to‘pni yuqoridan uzatish.</li>
+                    <li>10 daqiqa — pastdan qabul qilish.</li>
+                    <li>10 daqiqa — to‘pni maydonga yo‘naltirib urish.</li>
+                    <li>5 daqiqa — yengil cho‘zilish va tiklanish.</li>
+                </ul>
+
+                <button class="btn" onclick="showTip()">
+                    Menga maslahat ber!
+                </button>
+
+                <p id="tip">
+                    Bugun mashg‘ulotni boshlashga tayyormisan?
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <p class="quote">
+                “Buyuk sportchi bir kunda yaratilmaydi.
+                <span>Har kuni mehnat qil, o‘z maqsadingga ishon!</span>”
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>🏐 VolleyZone — Voleybol muxlislari uchun</p>
+        <p>© <span id="year"></span> | Sportni sev, sog‘lom bo‘l!</p>
+    </footer>
+
+    <script>
+        const tips = [
+            "Maslahat: to‘pni qabul qilishda tizzalaringni biroz buk.",
+            "Maslahat: to‘pni uzatishda barmoqlaringni to‘g‘ri ishlat.",
+            "Maslahat: mashg‘ulotdan oldin yaxshilab qizib ol.",
+            "Maslahat: jamoang bilan ko‘proq muloqot qil.",
+            "Maslahat: muntazam mashq qil va yetarlicha dam ol."
+        ];
+
+        let tipIndex = 0;
+
+        function showTip() {
+            document.getElementById("tip").textContent =
+                tips[tipIndex];
+
+            tipIndex = (tipIndex + 1) % tips.length;
+        }
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
